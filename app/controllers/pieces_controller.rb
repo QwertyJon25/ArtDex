@@ -5,7 +5,7 @@ class PiecesController < ApplicationController
     end
 
     def show
-        pieces = Piece.find_by(id: params[:id])
+        piece = Piece.find_by(id: params[:id])
         if piece
             render json: piece, status: :ok
         else
@@ -14,7 +14,7 @@ class PiecesController < ApplicationController
     end
 
     def create
-        piece = Piece.create(exercise_params)
+        piece = Piece.create(piece_params)
         if piece
             render json: piece, status: :created
         else
@@ -48,3 +48,4 @@ end
 
     end
 end
+

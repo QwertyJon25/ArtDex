@@ -38,6 +38,23 @@ ActiveRecord::Schema.define(version: 2021_11_28_213904) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "equipment", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "exercises", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.text "description"
+    t.string "category"
+    t.integer "equipment_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "galleries", force: :cascade do |t|
     t.string "name"
     t.string "desc"
@@ -70,6 +87,20 @@ ActiveRecord::Schema.define(version: 2021_11_28_213904) do
     t.string "artist_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "user_exercises", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "exercise_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "password_digest"
   end
 
 end
