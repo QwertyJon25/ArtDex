@@ -34,8 +34,8 @@ const deleteHandler = () => {
     return (
         <li className="piece-card">
             <img src={image} alt={name} className="piece-card-img"/>
-            <h6>{name}</h6>, <h6>{category}</h6>, <h6>{style}</h6> <br />
-            <h6>{price}</h6>, <h6>{date}</h6> <br/>
+            <h6>{name}</h6> <h6>{category}</h6> <h6>{style}</h6>
+            <h6>Price: {price}</h6> <h6>Years: {date}</h6>
             <h6>{desc}</h6>
             <button onClick={() => setShowForm(!showForm)} style={{backgroundColor: "#8BF5C7"}}>Edit</button>
             <button onClick={deleteHandler} style={{backgroundColor: "#FA6A74"}}>Delete</button>

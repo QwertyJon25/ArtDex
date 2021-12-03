@@ -1,11 +1,19 @@
-import React, { useState, useEffect } from 'react'
-// import { BrowserRouter as Router } from 'react-router-dom'
-// import UnauthenticatedApp from './UnauthenticatedApp'
-// import AuthenticatedApp from './AuthenticatedApp'
-import Main from "./Main";
-import WelcomePage from './WelcomePage';
-
+import React from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
+// import { Outlet, Link } from "react-router-dom";
+// import AutenticatedApp from "./AuthenticatedApp"
+// import UnauthenticatedApp from "./UnauthenticatedApp"
+import Main from "./Main";
+// import WelcomePage from './WelcomePage';
+import ArtistPage from "./ArtistPage";
+import DirectorPage from "./DirectorPage";
+import GalleryPage from "./GalleryPage";
+import PiecePage from "./PiecePage";
+// import NavBar from "./NavBar";
+// import ArtistProfile from "./ArtistProfile";
+
+
 
 export default function App() {
   // const [currentUser, setCurrentUser] = useState(null)
@@ -31,8 +39,38 @@ export default function App() {
 
 
   return (
-    <WelcomePage />,
-    <Main />
+    // <AuthenticatedApp />,
+    // <UnauthenticatedApp/>,
+  //   <BrowserRouter>
+  //   <Routes>
+  //     <Route path="/main" element={<Main />} />
+  //     <Route path="welcome" element={<WelcomePage />} />
+  //   </Routes>
+  // </BrowserRouter>
+
+  <div>
+    <BrowserRouter>
+     <Routes>
+       <Route path="/" element={<Main />}>
+           <Route path="artists" element={<ArtistPage />} />
+           <Route path="directors" element={<DirectorPage/>} />
+           <Route path="galleries" element={<GalleryPage/>} />
+          <Route path="invoices" element={<PiecePage/>} />
+           {/* <Route path="invoices" element={<ArtistProfile />} /> */}
+       </Route>
+     </Routes>
+   </BrowserRouter>,
+      {/* <nav
+        style={{
+          borderBottom: "solid 1px",
+          paddingBottom: "1rem"
+        }}
+      >
+        <Link to="/main">Main</Link> |{" "}
+        <Link to="/welcome">Welcome</Link>
+      </nav>
+      <Outlet /> */}
+    </div>
     
   //   <Router>
     

@@ -7,9 +7,11 @@ const { name, desc, contact, location } = galleryData;
 
     return (
         <div className="gallery-card">
-            Name: {name}
-            Location: {location}, Contact: {contact}
-            Description: {desc}
+            Name: {name} <br />
+            Location: {location} <br />
+            Contact: {contact} <br />
+            Description: {desc} <br />
+            <hr/>
         </div>
     )
 }
