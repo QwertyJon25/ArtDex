@@ -55,7 +55,13 @@ export default function App() {
            <Route path="artists" element={<ArtistPage />} />
            <Route path="directors" element={<DirectorPage/>} />
            <Route path="galleries" element={<GalleryPage/>} />
-          <Route path="invoices" element={<PiecePage/>} />
+          <Route path="pieces" element={<PiecePage/>} />
+          <Route path="*" element={
+        <main style={{ padding: "1rem" }}>
+          <p>There's nothing here!</p>
+        </main>
+      }
+    />
            {/* <Route path="invoices" element={<ArtistProfile />} /> */}
        </Route>
      </Routes>
