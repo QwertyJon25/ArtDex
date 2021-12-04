@@ -1,76 +1,73 @@
+
 import React, { useState } from 'react'
-import { Redirect, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function Login({ setCurrentUser }) {
-   
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('')
-
-    const handleSubmit = (event) => {
+  
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+  
+  const handleSubmit = (event) => {
     event.preventDefault()
     fetch('/login', {
-        method: 'POST',
-            headers: {
+      method: 'POST',
+      headers: {
         'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({username, password})
+      },
+      body: JSON.stringify({username, password})
     })
-        .then(res => {
+      .then(res => {
         if (res.ok) {
-            res.json().then(user => {
+          res.json().then(user => {
             setCurrentUser(user)
-            
-            })
+           
+          })
         } else {
-            res.json().then(errors => {
+          setCurrentUser({ username })
+      
+          res.json().then(errors => {
             console.error(errors)
-            })
+          })
         }
-        })
-    }
-return (
-    <div className="login">
-        <Redirect to="/" />
-    <form className="w-2/3 bg-white p-8 max-w-md space-y-4" onSubmit={handleSubmit}>
-        <div className="Login-form">
-        <h1 className="login-text">Login</h1>
+      })
+  }
+  return (
+    <div className="authForm">
+    
+      <form className="auth-form" onSubmit={handleSubmit}>
+        <h1>Log In</h1>
         <p>
-            <label 
-            className="username-signup"
+          <label 
             htmlFor="username"
-            >
+          >
             Username
-            </label>
-            <input
-                type="text"
-                name="username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                className="username-signup-box"
-            />
+          </label>
+          <input
+            type="text"
+            name="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
         </p>
         <p>
-        <label 
-            className="username-signup"
+          <label 
             htmlFor="password"
-        >
+          >
             Password
-        </label>
-        <input
+          </label>
+          <input
             type="password"
             name=""
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="password-signup-box"
-        />
+          />
         </p>
-        <p><button className="signup-button-two" type="submit">Log In</button></p>
-        <p className="or-text-two">~  or ~</p>
-        <p className="text-center"><Link className="signup-button" to="/signup">Sign Up</Link></p>
-        </div>
-    </form>
+        <p><button type="submit">Log In</button></p>
+        <p>-- or --</p>
+        <p><Link to="/signup">Sign Up</Link></p>
+      </form>
     </div>
-)
+  )
 }
 
 export default Login

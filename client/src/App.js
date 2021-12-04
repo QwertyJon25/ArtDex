@@ -39,11 +39,10 @@ export default function App() {
 
 
   return (
-    // <AuthenticatedApp />,
-    // <UnauthenticatedApp/>,
   //   <BrowserRouter>
   //   <Routes>
-  //     <Route path="/main" element={<Main />} />
+   //     <Route path="/authen" element={<AuthenticatedApp />} />
+      //     <Route path="/unauthen" element={<UnauthenticatedApp/>} />
   //     <Route path="welcome" element={<WelcomePage />} />
   //   </Routes>
   // </BrowserRouter>

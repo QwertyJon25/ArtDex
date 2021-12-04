@@ -34,6 +34,7 @@ const deleteHandler = () => {
     return (
         <div className="piece-card">
             <img src={image} alt={name} className="piece-card-img"/>
+            <span className="piece-text">
             Title: {name} <br/>
             <hr/>
             {category} <br/>
@@ -45,6 +46,7 @@ const deleteHandler = () => {
             Year: {date} <br/>
             <hr/>
             {desc} <br/>
+            </span>
             <button onClick={() => setShowForm(!showForm)} style={{backgroundColor: "#8BF5C7"}}>Edit</button>
             <button onClick={deleteHandler} style={{backgroundColor: "#FA6A74"}}>Delete</button>
             { showForm ? <form onSubmit={handleUpdate}>

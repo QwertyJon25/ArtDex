@@ -15,6 +15,18 @@ img {
     /* text-align: center; */
     width: 150px;
     height: 550px;
+    text-align: center;
+  }
+
+  .piece-card-img {
+  float: right;
+}
+
+  .piece-text {
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    
   }
 
   .artist-card {
@@ -42,6 +54,7 @@ img {
     text-align: center;
     width: 150px;
     height: 460px;
+    text-align: center;
   }
 
   
@@ -82,3 +95,4 @@ nav {
   height: 400px;
   width: 1498px;;
 }
+

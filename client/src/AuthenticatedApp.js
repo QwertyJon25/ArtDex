@@ -1,8 +1,15 @@
 import './App.css';
 // import NavBar from './NavBar';
 // import Main from "./Main"
-import React, {useState, useEffect} from 'react';
-import { Switch, Route, Routes } from 'react-router-dom'
+import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Main from "./Main";
+import WelcomePage from './WelcomePage';
+import ArtistPage from "./ArtistPage";
+import DirectorPage from "./DirectorPage";
+import GalleryPage from "./GalleryPage";
+import PiecePage from "./PiecePage";
+import NavBar from "./NavBar";
 
 
 function AuthenticatedApp({setCurrentUser, currentUser }){
@@ -20,8 +27,25 @@ function AuthenticatedApp({setCurrentUser, currentUser }){
 
   return ( 
 
-    <div className="App">
-        
+     <div className="autehn-app">
+    <WelcomePage/>
+     <NavBar currentUser={currentUser} handleLogout={handleLogout}/>
+    <BrowserRouter>
+     <Routes>
+       <Route path="/" element={<Main />}>
+           <Route path="artists" element={<ArtistPage />} />
+           <Route path="directors" element={<DirectorPage/>} />
+           <Route path="galleries" element={<GalleryPage/>} />
+          <Route path="pieces" element={<PiecePage/>} />
+          <Route path="*" element={
+        <main style={{ padding: "1rem" }}>
+          <p>There's nothing here!</p>
+        </main>
+      }
+    />
+       </Route>
+     </Routes>
+   </BrowserRouter>
     </div>
   )
 }
