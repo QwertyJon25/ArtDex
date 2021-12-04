@@ -9,6 +9,7 @@ export default function GalleryContainer({ galleries }) {
     return (
         <div className="gallery-container">
             <ul className="cards">{galleryCards}</ul>
+            <div className="gallery-div"/>
         </div>
     )
 }
