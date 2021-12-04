@@ -32,11 +32,19 @@ const deleteHandler = () => {
 
 }
     return (
-        <li className="piece-card">
+        <div className="piece-card">
             <img src={image} alt={name} className="piece-card-img"/>
-            <h6>{name}</h6> <h6>{category}</h6> <h6>{style}</h6>
-            <h6>Price: {price}</h6> <h6>Years: {date}</h6>
-            <h6>{desc}</h6>
+            Title: {name} <br/>
+            <hr/>
+            {category} <br/>
+            <hr/>
+            {style} <br/>
+            <hr/>
+            Price: {price} <br/>
+            <hr/>
+            Year: {date} <br/>
+            <hr/>
+            {desc} <br/>
             <button onClick={() => setShowForm(!showForm)} style={{backgroundColor: "#8BF5C7"}}>Edit</button>
             <button onClick={deleteHandler} style={{backgroundColor: "#FA6A74"}}>Delete</button>
             { showForm ? <form onSubmit={handleUpdate}>
@@ -49,6 +57,6 @@ const deleteHandler = () => {
                 New Image: <input onChange={(e) => setNewImage(e.target.value)} value={newImage} placeholder="input new image" name="image" type="text" />
                 <input type="submit" />
             </form>: null}
-        </li>
+        </div>
     );
 }

@@ -8,7 +8,10 @@ const { name, bio, contact, image } = directorData;
     return (
         <div className="director-card">
             <img src={image} alt={name} className="director-card-img"/>
-            Name: {name}, Contact: {contact}
+            Name: {name} <br/>
+            <hr/>
+            Contact: {contact} <br/>
+            <hr/>
             Bio: {bio}
         </div>
     )

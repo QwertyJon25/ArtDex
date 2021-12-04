@@ -1,11 +1,11 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './App.css';
+// import './App.css';
 // import { Outlet, Link } from "react-router-dom";
 // import AutenticatedApp from "./AuthenticatedApp"
 // import UnauthenticatedApp from "./UnauthenticatedApp"
 import Main from "./Main";
-// import WelcomePage from './WelcomePage';
+import WelcomePage from './WelcomePage';
 import ArtistPage from "./ArtistPage";
 import DirectorPage from "./DirectorPage";
 import GalleryPage from "./GalleryPage";
@@ -48,7 +48,8 @@ export default function App() {
   //   </Routes>
   // </BrowserRouter>
 
-  <div>
+  <div className="app">
+    <WelcomePage/>
     <BrowserRouter>
      <Routes>
        <Route path="/" element={<Main />}>
@@ -62,20 +63,9 @@ export default function App() {
         </main>
       }
     />
-           {/* <Route path="invoices" element={<ArtistProfile />} /> */}
        </Route>
      </Routes>
-   </BrowserRouter>,
-      {/* <nav
-        style={{
-          borderBottom: "solid 1px",
-          paddingBottom: "1rem"
-        }}
-      >
-        <Link to="/main">Main</Link> |{" "}
-        <Link to="/welcome">Welcome</Link>
-      </nav>
-      <Outlet /> */}
+   </BrowserRouter>
     </div>
     
   //   <Router>
