@@ -27,7 +27,7 @@ function AuthenticatedApp({setCurrentUser, currentUser }){
 
   return ( 
 
-     <div className="autehn-app">
+     <div className="authen-app">
     <WelcomePage/>
      <NavBar currentUser={currentUser} handleLogout={handleLogout}/>
     <BrowserRouter>

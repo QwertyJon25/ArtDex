@@ -1,14 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function NavBar({ user, setUser, currentUser, handleLogout }) {
-  // function handleLogoutClick() {
-  //   fetch("/logout", { method: "DELETE" }).then((r) => {
-  //     if (r.ok) {
-  //       setUser(null);
-  //     }
-  //   });
-  // }
+function NavBar({ currentUser, handleLogout }) {
+
+
+  
 
   return (
     <header>

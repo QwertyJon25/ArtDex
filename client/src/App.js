@@ -41,9 +41,11 @@ export default function App() {
   return (
   //   <BrowserRouter>
   //   <Routes>
-   //     <Route path="/authen" element={<AuthenticatedApp />} />
-      //     <Route path="/unauthen" element={<UnauthenticatedApp/>} />
-  //     <Route path="welcome" element={<WelcomePage />} />
+  // {currentUser ? (
+   //     <Route path="/authen" element={<AuthenticatedApp  setCurrentUser={setCurrentUser} currentUser={currentUser}/>} />
+   // ) : (
+
+      //     <Route path="/unauthen" element={<UnauthenticatedApp setCurrentUser={setCurrentUser}/>} /> ) }
   //   </Routes>
   // </BrowserRouter>
 
