@@ -35,58 +35,30 @@ const handleSubmit = (event) => {
 }
   return (
     <div className="login">
-        {/* <h3 className="you-signedup"> You're Signed up</h3> */}
     <form  onSubmit={handleSubmit}>
         <div className="sign-up-form"> 
         <h1 className="signup-text">Sign Up</h1>
     <p>
-        <label
-            className="username-signup"
-            htmlFor="username"
-        >
+        <label className="username-signup" htmlFor="username">
             Username
         </label>
-            <input
-                type="text"
-                name="user_name"
-                value={user_name}
-                onChange={(e) => setUsername(e.target.value)}
-                className="username-signup-box"
-            />
+            <input type="text" name="user_name" value={user_name} onChange={(e) => setUsername(e.target.value)} className="username-signup-box"/>
         </p>
     <p>
-        <label
-            className="username-signup"
-            htmlFor="password"
-        >
+        <label className="username-signup" htmlFor="password">
             Password
         </label>
-            <input
-                type="password"
-                name=""
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="password-signup-box"
-        />
+            <input type="password" name="" value={password} onChange={(e) => setPassword(e.target.value)} className="password-signup-box"/>
         </p>
         <p>
-        <label 
-            htmlFor="password_confirmation"
-            className="password-confirmation-text"
-        >
+        <label htmlFor="password_confirmation" className="password-confirmation-text">
             Password Confirmation
         </label>
-            <input
-                type="password"
-                name="password_confirmation"
-                value={passwordConfirmation}
-                onChange={(e) => setPasswordConfirmation(e.target.value)}
-                className="password-signup-confirmation-box"
-        />
+            <input type="password" name="password_confirmation" value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)} className="password-signup-confirmation-box"/>
         </p>
         <p><button className="signup-button-two" type="submit">Sign Up</button></p>
         <p className="or-text-two">~  or ~</p>
-        <p className="text-center"><Link className="login-link" to="/login">Log In</Link></p>
+        <p className="text-center"><nav><Link className="login-link" to="/login">Log In</Link></nav></p>
         </div>
     </form>
     </div>

@@ -1,8 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import './App.css';
-// import { Outlet, Link } from "react-router-dom";
-// import AutenticatedApp from "./AuthenticatedApp"
+// import AuthenticatedApp from "./AuthenticatedApp"
 // import UnauthenticatedApp from "./UnauthenticatedApp"
 import Main from "./Main";
 import WelcomePage from './WelcomePage';
@@ -10,8 +9,7 @@ import ArtistPage from "./ArtistPage";
 import DirectorPage from "./DirectorPage";
 import GalleryPage from "./GalleryPage";
 import PiecePage from "./PiecePage";
-// import NavBar from "./NavBar";
-// import ArtistProfile from "./ArtistProfile";
+import ArtistProfile from "./ArtistProfile";
 
 
 
@@ -39,15 +37,17 @@ export default function App() {
 
 
   return (
+  //   <div className="app">
   //   <BrowserRouter>
   //   <Routes>
   // {currentUser ? (
-   //     <Route path="/authen" element={<AuthenticatedApp  setCurrentUser={setCurrentUser} currentUser={currentUser}/>} />
-   // ) : (
+  //      <Route path="/authen" element={<AuthenticatedApp  setCurrentUser={setCurrentUser} currentUser={currentUser}/>} />
+  //  ) : (
 
-      //     <Route path="/unauthen" element={<UnauthenticatedApp setCurrentUser={setCurrentUser}/>} /> ) }
+  //         <Route path="/unauthen" element={<UnauthenticatedApp setCurrentUser={setCurrentUser}/>} /> ) }
   //   </Routes>
   // </BrowserRouter>
+  // </div>
 
   <div className="app">
     <WelcomePage/>
@@ -58,6 +58,7 @@ export default function App() {
            <Route path="directors" element={<DirectorPage/>} />
            <Route path="galleries" element={<GalleryPage/>} />
           <Route path="pieces" element={<PiecePage/>} />
+          <Route path="your-pieces" element={<ArtistProfile/>} />
           <Route path="*" element={
         <main style={{ padding: "1rem" }}>
           <p>There's nothing here!</p>
@@ -68,22 +69,6 @@ export default function App() {
      </Routes>
    </BrowserRouter>
     </div>
-    
-  //   <Router>
-    
-  //     {currentUser ? (
-  //         <AuthenticatedApp
-  //           setCurrentUser={setCurrentUser}
-  //           currentUser={currentUser}
-  //         />
-  //       ) : (
-  //         <WelcomePage />,
-  //         <UnauthenticatedApp
-  //           setCurrentUser={setCurrentUser}
-  //         />
-  //       )
-  //     }
-  //  </Router>
 )
 }
 

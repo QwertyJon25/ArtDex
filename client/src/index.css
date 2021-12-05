@@ -16,6 +16,13 @@ img {
     width: 150px;
     height: 550px;
     text-align: center;
+    border-top: solid;
+    border-left: solid;
+    border-right: solid;
+    border-color: #FA4F37;
+    padding-left: 60px;
+    padding-right: 25px;
+    font-size: 14px;
   }
 
   .piece-card-img {
@@ -40,6 +47,12 @@ img {
     text-align: center;
     width: 150px;
     height: 450px;
+    border-top: solid;
+    border-left: solid;
+    border-right: solid;
+    border-color: #FA4F37;
+    padding-right: 75px;
+    font-size: 14px;
   }
 
   .director-card {
@@ -54,7 +67,6 @@ img {
     text-align: center;
     width: 150px;
     height: 460px;
-    text-align: center;
   }
 
   
@@ -69,10 +81,12 @@ img {
 
 nav {
   background-color: #FA4F37;
+  width: 1550px;
 }
 
 .welcome-header {
   background-color: #FA4F37;
+  width: 1550px;
   
 }
 
@@ -94,5 +108,9 @@ nav {
   background-color: #FACC41;
   height: 400px;
   width: 1498px;;
+}
+
+.new-piece-form {
+  text-align: center;
 }
 

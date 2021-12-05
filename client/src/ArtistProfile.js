@@ -28,7 +28,7 @@ export default function ArtistProfile() {
 
     return (
         <div>
-            <ul className="cards">{artPieceCards}</ul>
+            <ul className="your-cards">{artPieceCards}</ul>
         </div>
     )
 }

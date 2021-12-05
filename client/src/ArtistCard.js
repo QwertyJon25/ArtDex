@@ -16,7 +16,7 @@ const { name, bio, contact, style, dates, image } = artistData;
             <hr/>
             Style: {style} <br/>
             <hr/>
-            Dates: {dates}
+            Birth Year: {dates}
         </div>
     )
 }
