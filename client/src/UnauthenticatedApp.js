@@ -17,6 +17,9 @@ function UnauthenticatedApp({ setCurrentUser }) {
     />
         </Routes>
     </BrowserRouter>
+    
+    // <Login setCurrentUser={setCurrentUser} />,
+    // <Signup setCurrentUser={setCurrentUser}/>
 )
 }
 

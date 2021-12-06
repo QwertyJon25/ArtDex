@@ -47,7 +47,7 @@ const deleteHandler = () => {
             <hr/>
             {desc} <br/>
             </span>
-            <button onClick={() => setShowForm(!showForm)} style={{backgroundColor: "#8BF5C7"}}>Edit</button>
+            <button onClick={() => setShowForm(!showForm)} style={{backgroundColor: "#9E74F2"}}>Edit</button>
             <button onClick={deleteHandler} style={{backgroundColor: "#FA6A74"}}>Delete</button>
             { showForm ? <form onSubmit={handleUpdate}>
                 New Name: <input onChange={(e) => setNewName(e.target.value)} value={newName} placeholder="input new name" name="name" type="text" />

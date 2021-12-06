@@ -13,6 +13,7 @@ export default function ArtistProfile() {
     }, [])
 
     //filter function for pieces to iterate only artist id associated pieces
+    
     // const sortedPieces = artPieces?.sort(() => {
     //      if (artPieces.artist_id === artist.id){
     //          return piece
